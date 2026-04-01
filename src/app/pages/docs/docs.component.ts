@@ -33,6 +33,18 @@ import { DocsService } from '../../services/docs.service';
     </nav>
 
     <div class="docs-layout">
+      <!-- Mobile section tabs (visible only on small screens) -->
+      <nav class="mobile-section-tabs">
+        <a
+          *ngFor="let s of sections"
+          [routerLink]="['/docs', s.id]"
+          [class.active]="activeSection === s.id"
+        >
+          <span class="tab-icon">{{ s.icon }}</span>
+          <span>{{ s.label }}</span>
+        </a>
+      </nav>
+
       <!-- Sidebar -->
       <aside class="docs-sidebar">
         <div class="sidebar-inner">

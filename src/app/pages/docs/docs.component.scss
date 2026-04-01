@@ -50,6 +50,10 @@
     transition: color 0.2s;
 
     &:hover { color: var(--text); }
+
+    @media (max-width: 500px) {
+      &:not(.nav-gh) { display: none; }
+    }
   }
 
   .nav-gh {
@@ -76,6 +80,52 @@
   display: flex;
   min-height: 100vh;
   padding-top: 60px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+}
+
+// Mobile section tab bar (hidden on desktop)
+.mobile-section-tabs {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-secondary);
+    padding: 0 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+    flex-shrink: 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+      padding: 0.75rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      flex-shrink: 0;
+
+      .tab-icon { font-size: 0.75rem; }
+
+      &.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+        font-weight: 600;
+      }
+      &:hover { color: var(--text); }
+    }
+  }
 }
 
 // ──────────────────────────────────────────────
@@ -90,6 +140,8 @@
   overflow-y: auto;
   border-right: 1px solid var(--border);
   background: var(--bg);
+
+  @media (max-width: 768px) { display: none; }
 
   .sidebar-inner {
     display: flex;

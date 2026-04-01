@@ -42,6 +42,11 @@
     gap: 2rem;
     list-style: none;
 
+    @media (max-width: 600px) {
+      gap: 1rem;
+      li:not(:last-child) { display: none; } // keep only GitHub on mobile
+    }
+
     a {
       font-size: 0.9rem;
       font-weight: 500;
@@ -278,7 +283,8 @@
   .term-line {
     display: flex;
     align-items: baseline;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 0;
     overflow: hidden;
   }
 
@@ -326,6 +332,9 @@
 // ──────────────────────────────────────────────
 .section {
   padding: 6rem 2rem;
+
+  @media (max-width: 600px) { padding: 4rem 1.25rem; }
+
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
@@ -630,6 +639,8 @@
 .footer-links {
   display: flex;
   gap: 4rem;
+
+  @media (max-width: 600px) { gap: 2rem; }
 }
 
 .footer-col {
