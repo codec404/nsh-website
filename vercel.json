@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd nsh-website && npm install && npx ng build --configuration=production",
+  "outputDirectory": "nsh-website/dist/nsh-website/browser",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
