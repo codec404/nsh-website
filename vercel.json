@@ -1,5 +1,4 @@
 {
-  "root": "nsh-website",
   "buildCommand": "npm install && npx ng build --configuration=production",
   "outputDirectory": "dist/nsh-website/browser",
   "rewrites": [

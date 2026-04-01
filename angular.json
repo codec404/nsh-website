@@ -30,7 +30,7 @@
               },
               {
                 "glob": "**/*.md",
-                "input": "../nsh-doc",
+                "input": "nsh-doc",
                 "output": "/assets/docs"
               }
             ],
