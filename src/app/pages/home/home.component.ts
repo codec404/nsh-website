@@ -256,23 +256,48 @@ interface TypingState {
           <div class="install-left">
             <span class="section-label">Get started</span>
             <h2>Install nsh</h2>
-            <p>Built in C. Depends only on readline and SQLite. Compiles in seconds.</p>
-            <a routerLink="/docs/overview" class="btn btn-primary">Full install guide →</a>
+            <p>Native installer for Windows. Build from source on macOS and Linux — depends only on readline and SQLite.</p>
+            <div class="install-ctas">
+              <a routerLink="/docs/windows" class="btn btn-primary">Windows installer →</a>
+              <a routerLink="/docs/overview" class="btn btn-ghost">Build from source →</a>
+            </div>
           </div>
           <div class="install-right">
-            <div class="terminal">
-              <div class="terminal-bar">
-                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                <span class="terminal-title">terminal</span>
+            <div class="install-tabs">
+              <div class="install-tab">
+                <div class="install-tab-label">
+                  <span class="tab-os-icon">⊞</span> Windows
+                </div>
+                <div class="terminal">
+                  <div class="terminal-bar">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="terminal-title">nsh-setup.exe</span>
+                  </div>
+                  <div class="terminal-body">
+                    <span class="output">1. Download nsh-setup.exe from Releases</span>
+                    <span class="output">2. Run the installer wizard</span>
+                    <span class="output">3. Open <span class="highlight">nsh Terminal</span> from Start Menu</span>
+                    <div class="term-line" style="margin-top:8px"><span class="prompt accent">nsh:/cygdrive/c/Users/you$&nbsp;</span><span class="cmd cursor-inline">▋</span></div>
+                  </div>
+                </div>
               </div>
-              <div class="terminal-body">
-                <div class="term-line"><span class="prompt">$ </span><span class="cmd">brew install readline sqlite</span></div>
-                <div class="term-line" style="margin-top:8px"><span class="prompt">$ </span><span class="cmd">git clone https://github.com/codec404/nsh</span></div>
-                <div class="term-line"><span class="prompt">$ </span><span class="cmd">cd nsh && make</span></div>
-                <span class="output highlight">✓ build/nsh ready</span>
-                <div class="term-line" style="margin-top:8px"><span class="prompt">$ </span><span class="cmd">./build/nsh</span></div>
-                <span class="output"><span class="keyword">Welcome to nsh 1.0!</span></span>
-                <div class="term-line"><span class="prompt accent">alice:~ $&nbsp;</span><span class="cmd cursor-inline">▋</span></div>
+              <div class="install-tab">
+                <div class="install-tab-label">
+                  <span class="tab-os-icon">⌘</span> macOS / Linux
+                </div>
+                <div class="terminal">
+                  <div class="terminal-bar">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="terminal-title">terminal</span>
+                  </div>
+                  <div class="terminal-body">
+                    <div class="term-line"><span class="prompt">$ </span><span class="cmd">brew install readline sqlite</span></div>
+                    <div class="term-line" style="margin-top:8px"><span class="prompt">$ </span><span class="cmd">git clone https://github.com/codec404/nsh</span></div>
+                    <div class="term-line"><span class="prompt">$ </span><span class="cmd">cd nsh && make && sudo make install</span></div>
+                    <span class="output highlight">✓ build/nsh ready</span>
+                    <div class="term-line" style="margin-top:8px"><span class="prompt accent">alice:~ $&nbsp;</span><span class="cmd cursor-inline">▋</span></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

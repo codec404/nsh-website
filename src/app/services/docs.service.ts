@@ -29,6 +29,7 @@ export class DocsService {
       { id: 'vs-bash',   label: 'vs Bash',         icon: '⚡' },
       { id: 'config',    label: 'Configuration',   icon: '⚙' },
       { id: 'shellenv',  label: 'ShellEnv',        icon: '◐' },
+      { id: 'windows',   label: 'Windows',         icon: '⊞' },
     ];
   }
 }
