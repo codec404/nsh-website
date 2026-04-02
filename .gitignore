@@ -45,3 +45,5 @@ Thumbs.db
 
 # Personal *.md files
 DEPLOYMENT.md
+.vercel
+.env*.local
