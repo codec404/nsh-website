@@ -68,6 +68,9 @@ import { DocsService } from '../../services/docs.service';
               <span class="meta-item">◈ nsh docs</span>
               <span class="meta-item">v1.0</span>
             </div>
+            <div class="sidebar-copyright">
+              &copy; {{ currentYear }} nsh contributors.<br>MIT License.
+            </div>
           </div>
         </div>
       </aside>
@@ -120,6 +123,7 @@ export class DocsComponent implements OnInit, OnDestroy {
   htmlContent: SafeHtml | null = null;
   loading = false;
   error: string | null = null;
+  currentYear = new Date().getFullYear();
 
   private subs = new Subscription();
 

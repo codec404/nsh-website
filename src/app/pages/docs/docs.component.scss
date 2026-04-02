@@ -221,6 +221,14 @@
     font-size: 0.7rem;
     font-family: var(--font-mono);
     color: var(--text-muted);
+    margin-bottom: 0.6rem;
+  }
+
+  .sidebar-copyright {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+    line-height: 1.6;
   }
 }
 
